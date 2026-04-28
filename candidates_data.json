@@ -1,0 +1,83 @@
+[
+  {
+    "id": "c2857d9f-30d8-4b98-a9cf-dffea655af39",
+    "timestamp": "2026-04-28T07:41:46.679158Z",
+    "name": "Aryan Pratap Singh",
+    "email": "aryan122pratap@gmail.com",
+    "phone": "7455968931",
+    "experience_years": "1",
+    "desired_position": "Ai/Ml intern",
+    "location": "Delhi",
+    "tech_stack": [
+      "I'm currently experiencing a brief technical connection issue. Could you please rephrase or try again?"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "I'm currently experiencing a brief technical connection issue. Could you please rephrase or try again?",
+        "question": "I'm currently experiencing a brief technical connection issue. Could you please rephrase or try again?",
+        "answer": "what?"
+      }
+    ],
+    "data_consent": true
+  },
+  {
+    "id": "ae58c568-20a3-4687-a885-09fa700975a8",
+    "timestamp": "2026-04-28T08:11:17.203822Z",
+    "name": "Aryan Pratap Singh",
+    "email": "aryan122pratap@gmail.com",
+    "phone": "7455968931",
+    "experience_years": "2",
+    "desired_position": "Ai/ml intern",
+    "location": "Delhi",
+    "tech_stack": [
+      "Aws",
+      "Python",
+      "MongoDB"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "Aws",
+        "question": "1. Can you explain the difference between Amazon S3 and Amazon EBS, and when you would use each in a typical AWS deployment?\n2. How would you design a highly available and scalable architecture for a web application using AWS services such as EC2, RDS, and ELB?\n3. Suppose you're tasked with migrating a legacy on-premises database to AWS, and you need to ensure minimal downtime and data consistency - how would you approach this migration using AWS services like DMS and RDS?",
+        "answer": "Amazon S3 and Amazon Elastic Block Store serve different purposes: S3 is object storage used for storing files such as images, videos, backups, and static website content, offering massive scalability and durability, while EBS is block storage that acts like a virtual hard drive attached to an EC2 instance, making it ideal for operating systems, databases, and applications requiring low-latency disk access. In a typical AWS deployment, S3 is used for static assets and backups, whereas EBS is used for application servers and database storage.\n\nFor a highly available and scalable web application on AWS, I would place an Elastic Load Balancing in front of multiple Amazon EC2 instances running in an Auto Scaling Group across multiple Availability Zones, ensuring fault tolerance and automatic scaling based on demand. The application would use Amazon RDS with Multi-AZ deployment for high availability, while static files would be stored in Amazon S3 and optionally delivered through CloudFront for faster global access.\n\nTo migrate a legacy on-premises database to AWS with minimal downtime, I would first provision an Amazon RDS instance and use AWS Database Migration Service to perform an initial full data load followed by Change Data Capture (CDC), which continuously replicates ongoing changes from the source database. After validating data consistency and ensuring replication lag is minimal, I would schedule a brief cutover window, stop writes on the source, allow DMS to sync final transactions, and then redirect the application to the RDS instance."
+      },
+      {
+        "technology": "Python",
+        "question": "1. Can you explain the difference between static typing and dynamic typing in Python, and how it affects your coding style?\n2. How would you implement a decorator in Python to measure the execution time of a function, and what are some potential use cases for this decorator?\n3. Suppose you're working on a Python project that involves processing large CSV files, and you're experiencing memory issues due to the size of the files - how would you use Python's built-in libraries or third-party libraries like Pandas to optimize memory usage?",
+        "answer": "Python is a dynamically typed language, meaning variable types are determined at runtime, so you can assign different types to the same variable without explicit declarations. Static typing, found in languages like Java or C++, requires variable types to be declared at compile time, catching type errors earlier. Although Python is dynamic, it supports optional type hints using the typing module, which improves readability, IDE support, and maintainability. Dynamic typing speeds up development, while type hints help make large codebases safer and easier to manage.\n\nA decorator for measuring execution time can be implemented using the time module and a wrapper function. It records the start time before calling the target function and calculates the elapsed time afterward. This is especially useful for performance profiling, benchmarking algorithms, optimizing database queries, monitoring API response times, and identifying bottlenecks in production code.\n\nWhen processing large CSV files, loading the entire file into memory is usually a bad idea\u2014computers have a stubborn refusal to conjure extra RAM on demand. Using Python's built-in csv module allows row-by-row processing, which is highly memory efficient. With Pandas, you can use chunksize to read the file in smaller portions, specify appropriate data types using dtype, load only required columns with usecols, and disable unnecessary parsing features. For truly massive datasets, libraries like Dask or Polars can handle out-of-core computation efficiently."
+      },
+      {
+        "technology": "MongoDB",
+        "question": "1. Can you explain the difference between a MongoDB collection and a database, and how you would decide when to create a new collection versus a new database?\n2. How would you optimize the performance of a slow MongoDB query, and what indexing strategies would you consider to improve query execution time?\n3. Suppose you're designing a MongoDB schema for an e-commerce application with high traffic and large product catalogs, how would you structure your collections and indexes to support efficient product searches and filtering?",
+        "answer": "A MongoDB database is a container that holds multiple collections, while a collection is a group of related documents, similar to a table in relational databases. You would create a new collection when storing a different type of entity within the same application, such as users, products, or orders. A new database is typically created when you need strict isolation, such as for separate applications, tenants, environments, or security boundaries.\n\nTo optimize a slow MongoDB query, I would first analyze it using the explain() method to identify collection scans, inefficient stages, or high document examination counts. Then, I would create appropriate indexes based on query patterns, such as single-field indexes for frequent filters, compound indexes for multi-field queries, and text indexes for full-text search. It's also important to avoid over-indexing, as excessive indexes can slow down writes and consume additional storage.\n\nFor a high-traffic e-commerce application, I would use separate collections for products, categories, users, orders, and reviews. The products collection would store core product details, embedded variants, and inventory data, while reviews could be kept separately due to their potentially large volume. To support fast searches and filtering, I would create compound indexes on commonly queried fields like category, brand, price, and availability, along with text indexes on product name and description. For advanced search capabilities at scale, MongoDB Atlas Search would be an excellent choice."
+      }
+    ],
+    "data_consent": true
+  },
+  {
+    "id": "ae15d920-ec65-4fd0-9544-a48582daed30",
+    "timestamp": "2026-04-28T08:46:54.248644Z",
+    "name": "Aryan Pratap Singh",
+    "email": "aryan122pratap@gmail.com",
+    "phone": "7455968931",
+    "experience_years": "1",
+    "desired_position": "Ai/ML intern",
+    "location": "Delhi",
+    "tech_stack": [
+      "Python",
+      "AWS"
+    ],
+    "qa_pairs": [
+      {
+        "technology": "Python",
+        "question": "1. Can you explain the difference between supervised and unsupervised learning in Python, and provide an example of when you would use each?\n2. How would you implement a simple neural network using Python's Keras library to classify handwritten digits, and what considerations would you take into account for model evaluation?\n3. Suppose you're tasked with building a recommendation system using collaborative filtering in Python, and you have a large dataset of user-item interactions - how would you approach this problem, and what techniques would you use to handle issues like sparsity and scalability?",
+        "answer": "Supervised learning uses labeled data, where the model learns to map inputs to known outputs; common tasks include classification and regression. Unsupervised learning works with unlabeled data, discovering hidden patterns such as clusters or associations. For example, you would use supervised learning to predict whether an email is spam based on historical labeled emails, while unsupervised learning would be ideal for customer segmentation based on purchasing behavior. Popular Python libraries for both include scikit-learn, which provides a wide range of algorithms.\nTo classify handwritten digits using Keras, you can train a simple feedforward neural network on the MNIST dataset by flattening the 28\u00d728 pixel images, adding dense hidden layers with ReLU activation, and using a softmax output layer for the ten digit classes. The model is compiled with the Adam optimizer and categorical cross-entropy loss, then trained on the training set. Evaluation should focus on accuracy, confusion matrix, validation loss, and checking for overfitting using techniques like early stopping and dropout. Keras makes this implementation straightforward and production-ready.\nFor a large-scale recommendation system, I would use collaborative filtering techniques such as matrix factorization, alternating least squares (ALS), or neural collaborative filtering. Sparse user-item matrices are best handled using latent factor models, dimensionality reduction, and implicit feedback methods. To ensure scalability, distributed frameworks like Apache Spark MLlib are highly effective. Additional strategies include approximate nearest neighbor search, regularization, batch retraining, and hybrid approaches that combine collaborative and content-based filtering for improved recommendation quality."
+      },
+      {
+        "technology": "AWS",
+        "question": "1. Can you explain the difference between Amazon SageMaker and Amazon Rekognition, and how you would choose between them for a basic image classification task?\n2. How would you optimize the performance of an AWS SageMaker endpoint that is experiencing high latency, considering factors such as instance type, model size, and input data format?\n3. Suppose you're tasked with building a recommender system using AWS services for an e-commerce platform, and you need to integrate user behavior data from Amazon Kinesis, product information from Amazon DynamoDB, and model training on Amazon SageMaker - how would you design the architecture?",
+        "answer": "Amazon SageMaker is a fully managed machine learning platform that allows you to build, train, and deploy custom ML models, while Amazon Rekognition is a pre-trained AI service for image and video analysis. For a basic image classification task, Rekognition is the faster and simpler choice if its built-in labels meet your requirements, since no model training is needed. However, if you need custom classes, higher accuracy, or complete control over the training process, SageMaker is the better option.\nTo reduce latency in a slow SageMaker endpoint, I would first choose an appropriate instance type, such as GPU-backed instances for deep learning models or larger CPU instances for traditional ML workloads. Next, I would optimize the model using techniques like pruning, quantization, or compiling with SageMaker Neo to reduce inference time. Using efficient serialization formats such as Protocol Buffers instead of bulky JSON, enabling multi-model endpoints when appropriate, and configuring auto scaling can further improve performance. Continuous monitoring through CloudWatch helps identify bottlenecks and fine-tune resource allocation.\nFor an e-commerce recommender system, I would stream real-time user interactions through Amazon Kinesis, store product metadata in Amazon DynamoDB, and process the combined data using AWS Lambda or Glue before storing feature-ready datasets in Amazon S3. Model training and deployment would be handled by SageMaker, while predictions would be served through a real-time endpoint. The application would query the SageMaker endpoint for personalized recommendations, using Kinesis for continuous feedback loops and periodic retraining to keep recommendations fresh and accurate."
+      }
+    ],
+    "data_consent": true
+  }
+]
