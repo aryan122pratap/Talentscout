@@ -69,8 +69,8 @@ talentscout/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/talentscout.git
-cd talentscout
+git clone https://github.com/aryan122pratap/Talentscout.git
+cd Talentscout
 ```
 
 ### 2. Set Up a Virtual Environment
@@ -226,7 +226,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 👤 Author
 
-Built as part of the **TalentScout AI/ML Intern Assignment**.
+ **Aryan Pratap Singh**
+
 
 ---
 
